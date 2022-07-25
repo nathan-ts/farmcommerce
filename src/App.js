@@ -28,35 +28,36 @@ export default class App extends Component {
           addToCart: this.addToCart,
           login: this.login,
           addProduct: this.addProduct,
-          clearCart: this.clearCart,
           checkout: this.checkout
         }}
       >
         <Router ref={this.routerRef}>
-        <div className="App">
-          <nav
-            className="navbar container"
-            role="navigation"
-            aria-label="main navigation"
-          >
-            <div className="navbar-brand">
-              <b className="navbar-item is-size-4 ">ecommerce</b>
-              <label
-                role="button"
-                class="navbar-burger burger"
-                aria-label="menu"
-                aria-expanded="false"
-                data-target="navbarBasicExample"
-                onClick={e => {
-                  e.preventDefault();
-                  this.setState({ showMenu: !this.state.showMenu });
-                }}
-              >
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-                <span aria-hidden="true"></span>
-              </label>
-            </div>
+          <div className="App">
+            <nav
+              className="navbar container"
+              role="navigation"
+              aria-label="main navigation"
+            >
+              <div className="navbar-brand">
+                <Link to="/" className="navbar-item is-size-4 has-text-weight-bold">
+                  Mount Albert Eco Farm
+                </Link>
+                <label
+                  role="button"
+                  class="navbar-burger burger"
+                  aria-label="menu"
+                  aria-expanded="false"
+                  data-target="navbarBasicExample"
+                  onClick={e => {
+                    e.preventDefault();
+                    this.setState({ showMenu: !this.state.showMenu });
+                  }}
+                >
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                  <span aria-hidden="true"></span>
+                </label>
+              </div>
               <div className={`navbar-menu ${
                   this.state.showMenu ? "is-active" : ""
                 }`}>
