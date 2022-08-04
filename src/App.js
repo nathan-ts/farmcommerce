@@ -82,7 +82,7 @@ export default class App extends Component {
                 </Link>
                 <label
                   role="button"
-                  class="navbar-burger burger"
+                  className="navbar-burger burger"
                   aria-label="menu"
                   aria-expanded="false"
                   data-target="navbarBasicExample"
