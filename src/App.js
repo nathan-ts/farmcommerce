@@ -1,6 +1,6 @@
 import axios from 'axios';
 import jwt_decode from 'jwt-decode';
-import React, { Component } from "react";
+import React, { Component, useRef } from "react";
 import { Routes, Route, Link, BrowserRouter as Router } from "react-router-dom";
 
 import AddProduct from './components/AddProduct';
@@ -69,7 +69,8 @@ export default class App extends Component {
           checkout: this.checkout
         }}
       >
-        <Router ref={this.routerRef}>
+        {/* <Router ref={this.routerRef}> */}
+        <Router >
           <div className="App">
             <nav
               className="navbar container"
@@ -128,11 +129,11 @@ export default class App extends Component {
               </div>
             </nav>
             <Routes>
-              <Route exact path="/" element={ProductList} />
-              <Route exact path="/login" element={Login} />
-              <Route exact path="/cart" element={Cart} />
-              <Route exact path="/add-product" element={AddProduct} />
-              <Route exact path="/products" element={ProductList} />
+              <Route exact path="/" element={<ProductList />} />
+              <Route exact path="/login" element={<Login />} />
+              <Route exact path="/cart" element={<Cart />} />
+              <Route exact path="/add-product" element={<AddProduct />} />
+              <Route exact path="/products" element={<ProductList />} />
             </Routes>
           </div>
         </Router>
